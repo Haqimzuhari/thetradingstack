@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .transition_default {
+        @apply transition duration-300 ease-in-out;
+    }
+    .transition_fast {
+        @apply transition duration-100 ease-in-out;
+    }
+
+    .flex_center {
+        @apply flex items-center justify-center;
+    }
+
+    .flex_col_center {
+        @apply flex flex-col items-center justify-center;
+    }
+
+    .body_theme {
+        @apply text-black bg-white;
+    }
+
+    .btn {
+        @apply text-xs font-semibold border-2 rounded shadow transition_default focus:ring-2 focus:ring-transparent focus:ring-offset-2 focus:outline-none;
+    }
+    .btn_primary {
+        @apply bg-black border-transparent text-general-50 hover:bg-primary-900 focus:bg-primary-900 focus:ring-primary-900 focus:text-general-50;
+    }
+    .btn_secondary {
+        @apply border-transparent text-general-900 bg-secondary-200 hover:bg-secondary-100 focus:bg-secondary-100 focus:ring-secondary-400;
+    }
+    .btn_danger {
+        @apply border-transparent text-general-50 bg-danger-600 hover:bg-danger-500 focus:bg-danger-500 focus:ring-danger-400;
+    }
+    .btn_disabled {
+        @apply border-transparent pointer-events-none text-neutral-400 bg-neutral-200;
+    }
+    .btn_outline_primary {
+        @apply text-black border-black hover:text-general-50 hover:bg-black focus:bg-black focus:ring-black focus:text-general-50;
+    }
+    .btn_outline_secondary {
+        @apply text-white border-secondary-300 hover:text-black hover:bg-secondary-300 focus:bg-secondary-300 focus:ring-secondary-400;
+    }
+    .btn_outline_danger {
+        @apply hover:bg-danger-600 text-danger-600 hover:text-general-50 border-danger-600 focus:bg-danger-600 focus:ring-danger-400;
+    }
+
+    .input_wrapper {
+        @apply flex flex-col items-start space-y-1;
+    }
+    .input_inline_wrapper {
+        @apply flex items-center justify-start space-x-2;
+    }
+    .label {
+        @apply text-xs font-bold;
+    }
+    .label.label_danger {
+        @apply text-danger-800;
+    }
+    .input_icon_wrapper {
+        @apply relative w-full;
+    }
+    .icon_input {
+        @apply absolute inset-y-0 left-0 w-10 flex_center;
+    }
+    .icon_input_end {
+        @apply absolute inset-y-0 right-0 w-10 flex_center;
+    }
+    .input {
+        @apply px-3 py-2 text-sm border border-transparent rounded appearance-none focus:outline-none transition_default ring-4 ring-transparent;
+    }
+    .input_icon {
+        @apply py-2 pl-10 pr-3 text-sm border border-transparent rounded appearance-none focus:outline-none transition_default ring-4 ring-transparent;
+    }
+    .input_icon_end {
+        @apply py-2 pl-3 pr-10 text-sm border border-transparent rounded appearance-none focus:outline-none transition_default ring-4 ring-transparent;
+    }
+    .input_primary {
+        @apply bg-general-100 hover:bg-white hover:border-black focus:border-black focus:bg-white focus:ring-primary-200 placeholder-general-300;
+    }
+    .input_danger {
+        @apply bg-danger-100 hover:bg-white hover:border-danger-800 focus:border-danger-800 focus:bg-white focus:ring-danger-200 placeholder-danger-300;
+    }
+
+    .link {
+        @apply underline rounded decoration-2 transition_default focus:outline-none ring-2 ring-transparent;
+    }
+    .link_primary {
+        @apply text-black hover:text-general-800 focus:ring-general-200 focus:text-general-800;
+    }
+
+    .nav_link {
+        @apply text-xs font-bold border-2 rounded transition_default focus:ring-2 focus:ring-transparent focus:ring-offset-2 focus:outline-none hover:bg-black border-transparent text-general-400 hover:text-general-50 w-full text-center py-2;
+    }
+    .nav_link.active {
+        @apply shadow bg-black text-general-50 hover:bg-primary-900 focus:bg-primary-900 focus:ring-primary-900 focus:text-general-50;
+    }
+}
